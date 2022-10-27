@@ -5,8 +5,11 @@ bool check_word(const char*, const char*);
 int main()
 {
     const char* a = "Hello World!";
-    const char* b = "vor";
+    const char* b = "Wor";
     const char* c = "banana";
+    std::cout << a << std::endl;
+    std::cout << b << std::endl;
+    std::cout << c << std::endl;
     if (check_word(a, b))
     {
         std::cout << "Found!" << std::endl;
