@@ -7,9 +7,8 @@ int main()
     const char* a = "Hello World!";
     const char* b = "Wor";
     const char* c = "banana";
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << c << std::endl;
+    
+    
     if (check_word(a, b))
     {
         std::cout << "Found!" << std::endl;
@@ -31,16 +30,19 @@ int main()
 
 bool check_word(const char* a, const char* b)
 {
-    std::string c = a;
-    std::string d = b;
+    int la = 0;
+    for (; *(a + la) != '\0'; la++);
+    int lb = 0;
+    for(; *(b + lb) != '\0'; lb++);
+
     bool found = false;
-    for (int startPos = 0; startPos + d.length() <= c.length();
+    for (int startPos = 0; startPos + lb <= la;
         startPos++)
     {
         bool match = true;
-        for (int i = 0; i < d.length(); i++)
+        for (int i = 0; *(b+i) != '\0'; i++)
         {
-            if (d[i] != c[i + startPos])
+            if (*(b+i) != *(a+i + startPos))
             {
                 match = false;
                 break;
