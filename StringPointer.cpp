@@ -7,8 +7,11 @@ int main()
     const char* a = "Hello World!";
     const char* b = "Wor";
     const char* c = "banana";
+    std::cout << "A: " << a << std::endl;
+    std::cout << "B: " << b << std::endl;
+    std::cout << "C: " << c << std::endl;
     
-    
+    std::cout << "B in A: " << std::endl;
     if (check_word(a, b))
     {
         std::cout << "Found!" << std::endl;
@@ -18,6 +21,7 @@ int main()
         std::cout << "Not Found!" << std::endl;
     }
     
+    std::cout << "C in A: " << std::endl;
     if (check_word(a, c))
     {
         std::cout << "Found!" << std::endl;
